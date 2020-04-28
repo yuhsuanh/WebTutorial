@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML Data Types</title>
+</head>
+<body>
+	<p>Check code to see the types</p>
+
+	<script type="text/javascript">
+		var num1 = 10; //Number
+		var num2 = 10.10 //Number
+		var num3 = 123e5 //Number
+
+		var str1 = "Yu-Hsuan Huang"; //String
+		var str1 = 'Yu-Hsuan Huang'; //String
+
+		var bool = true;	//Boolean
+
+		var obj = { firstName: "Yu-Hsuan", lastName: "Huang"}; //Object
+		
+
+		var non1;	//Value is undefined, type is undefined
+		var non2 = undefined; //Value is undefined, type is undefined
+		var non3 = ""; //The value is "", the typeof is "string"
+
+		var non4 = "String";
+		non4 = null; //Now value is null, but type is still an String
+		non4 = undefined;	//Now both value and type is undefined
+
+		//Different between undefined and null
+		typeof undefined;	//undefined
+		typeof null;	//object
+
+		null === undefined;	//false
+		null == undefined; //true
+
+	</script>
+</body>
+</html>
