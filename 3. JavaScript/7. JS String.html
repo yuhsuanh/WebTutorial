@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JS String</title>
+</head>
+<body>
+	<p>Check code</p>
+
+	<script type="text/javascript">
+		var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		var sln = txt.length;
+		//26
+		var fpos = txt.indexOf("CD");
+		//2
+		var lpos = txt.lastIndexOf("CD");
+		//2
+		var pos = txt.search("CD");
+		//2
+
+		var substr1 = txt.slice(4, 6);
+		//EF
+		var substr2 = txt.substring(4, 6);
+		//EF
+		var substr3 = txt.substr(4, 6); //(start, length)
+		//EFGHIJ
+
+		var plas1 = txt.replace("XYZ", "ABC");
+		//ABCDEFGHIJKLMNOPQRSTUVWABC
+		var plas2 = txt.replace(/xyz/i, "abc"); //insensitive
+		//ABCDEFGHIJKLMNOPQRSTUVWabc
+		var plas2 = txt.replace(/XYZ/g, "ABC"); //global match
+		//ABCDEFGHIJKLMNOPQRSTUVWABC
+
+		var upper = txt.toUpperCase();
+		//ABCDEFGHIJKLMNOPQRSTUVWXYZ
+		var lower = txt.toLowerCase();
+		//abcdefghijklmnopqrstuvwxyz
+
+		var newTxt = txt.concat(" ", "1234567890");
+		//ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890
+
+		var trimTxt = " ABC    ".trim();
+		//ABC
+
+		var char1 = txt.chatAt(0);
+		//A
+		var unicode = txt.charCodeAt(0); //unicode
+		//65
+		var char2 = txt[0];
+		//A
+		txt[0] = "1"; // Gives no error, but does not work
+
+		txt.split("|"); //Split on pipe
+		txt.split(""); //Split in characters
+
+	</script>
+</body>
+</html>
