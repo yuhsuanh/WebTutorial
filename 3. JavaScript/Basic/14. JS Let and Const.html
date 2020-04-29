@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JS Let and Const</title>
+</head>
+<body>
+	<p>Check code</p>
+
+	<script type="text/javascript">
+		//Let
+		//let keyword : Block Scope
+		var i = 7;
+		console.log(i); //i equal to 7
+		for (let i=0; i<5; i++) {
+			console.log(i); //i from 0 to 5
+		}
+		console.log(i); //i equal to 7
+
+		//let keyword : Function Scope
+		console.log(i); //i equal to 7
+		function myFunction() {
+			let i = 8;
+			console.log(i); //i equal to 8
+		}
+		console.log(i); //i equal to 7
+
+
+		//Const
+		//Variables defined with const behave like let variables, except they cannot be reassigned;
+		//It does NOT define a constant value. It defines a constant reference to a value.
+		const PI = 3.14159265359;
+	</script>
+</body>
+</html>

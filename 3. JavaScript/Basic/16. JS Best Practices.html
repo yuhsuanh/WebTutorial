@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JS Best Practices</title>
+</head>
+<body>
+	<p>Check code</p>
+
+	<script type="text/javascript">
+		var x1 = {};           // new object
+		var x2 = "";           // new primitive string
+		var x3 = 0;            // new primitive number
+		var x4 = false;        // new primitive boolean
+		var x5 = [];           // new array object
+		var x6 = /()/;         // new regexp object
+		var x7 = function(){}; // new function object
+
+
+		var x = 5 + 7;       // x.valueOf() is 12,  typeof x is a number
+		var x = 5 + "7";     // x.valueOf() is 57,  typeof x is a string
+		var x = "5" + 7;     // x.valueOf() is 57,  typeof x is a string
+		var x = 5 - 7;       // x.valueOf() is -2,  typeof x is a number
+		var x = 5 - "7";     // x.valueOf() is -2,  typeof x is a number
+		var x = "5" - 7;     // x.valueOf() is -2,  typeof x is a number
+		var x = 5 - "x";     // x.valueOf() is NaN, typeof x is a number
+
+
+		0 == "";        // true
+		1 == "1";       // true
+		1 == true;      // true
+		0 === "";       // false
+		1 === "1";      // false
+		1 === true;     // false
+
+	</script>
+</body>
+</html>
