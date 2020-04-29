@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JS Array</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var cars1 = ["Toyota", "Honda", "Subaru"];
+		var cars2 = new Array("BMW", "Mercedes", "Volkswagen");
+
+		var sln = cars1.length;
+		var sort = cars1.sort();
+		var firstCar = cars1[0];
+
+		//iteration
+		for(int i = 0; i < cars1.length; i++) {
+			console.log(cars1[i]);
+		}
+
+		//Popping and Pushing
+		cars1.push("Nissan"); //Adds a new element to an array (at the end)
+		cars1.pop(); //Removes the last element
+
+		//Shift and Unshift
+		cars1.undhift("Nissan");	//Adds a new element to an array (at the beginning)
+		cars1.shift();	//Removes the first element
+
+		//Delete Elements
+		delete cars1[0]
+
+		//toString
+		cars1.toString();
+
+		//Merge arrays
+		var newCars = cars1.concat(cars2);
+
+		//Reversing an Array
+		cars1.reverse();
+
+		//Array.forEach()
+		var txt = "";
+		cars1.forEach();
+		function myFunction(value, index, array) {
+		  txt = txt + value + "<br>";
+		}
+
+		//Array.filter()
+		var numbers = [45, 4, 9, 16, 25];
+		var over18 = numbers.filter(myFunction);
+		function myFunction(value, index, array) {
+		  return value > 18;
+		}
+
+	</script>
+</body>
+</html>

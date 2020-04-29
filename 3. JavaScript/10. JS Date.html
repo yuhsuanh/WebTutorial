@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JS Date</title>
+</head>
+<body>
+	<p>Check code</p>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		var d1 = new Date();	//Now
+		var d2 = new Date(2020, 3, 28, 18, 0, 0, 0);	//new Date(year, month, day, hours, minutes, seconds, milliseconds)
+		var d3 = new Date(1588111300000);	//Date(milliseconds)
+		var d4 = new Date("April 28, 2020 18:00:00");	//Date(date string)
+
+		document.getElementById("demo").innerHTML += d1 + '<br>';
+		document.getElementById("demo").innerHTML += d2 + '<br>';
+		document.getElementById("demo").innerHTML += d3 + '<br>';
+		document.getElementById("demo").innerHTML += d4 + '<br>';
+
+
+		//Date formats
+		//ISO Date		"2015-03-25" (The International Standard)
+		//Short Date	"03/25/2015"
+		//Long Date		"Mar 25 2015" or "25 Mar 2015"
+
+	</script>
+
+</body>
+</html>

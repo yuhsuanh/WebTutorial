@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JS Event</title>
+</head>
+<body>
+	<h3>Common HTML Events</h3>
+	<ul>
+		<li>onchange</li>
+		<li>onclick</li>
+		<li>onmouseover</li>
+		<li>onmouseout</li>
+		<li>onkeydown</li>
+		<li>onload</li>
+	</ul>
+
+
+	<button onclick="showDate()">Show Date</button>
+	<p id="demo"></p>
+	
+
+	<script type="text/javascript">
+		function showDate() {
+			document.getElementById("demo").innerHTML = Date();
+		}
+	</script>
+
+</body>
+</html>
