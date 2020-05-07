@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	
+	<title>Bootstrap Image</title>
+
+	<!-- Import Boostrap CSS -->
+	<!-- Method 1 - From online URL -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Method 2 - From local path -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+
+	<h1>Bootstrap Image</h1>
+	<br>
+
+
+
+	<h3>Responsive images</h3>
+	<p>Images in Bootstrap are made responsive with .img-fluid. max-width: 100%; and height: auto; are applied to the image so that it scales with the parent element.</p>
+	<img src="img.jpg" class="img-fluid" alt="Responsive image">
+	<br><br>
+
+
+
+	<h3>Image thumbnails</h3>
+	<p>You can use .img-thumbnail to give an image a rounded 1px border appearance</p>
+	<img src="img.jpg" alt="Image thumbnails" class="img-thumbnail">
+	<br><br>
+
+
+
+	<h3>Aligning images</h3>
+	<p>Align images with the helper float classes or text alignment classes. block-level images can be centered using the .mx-auto margin utility class.</p>
+	<img src="img.jpg" class="rounded float-left">
+	<img src="img.jpg" class="rounded float-right">
+	<img src="img.jpg" class="rounded mx-auto d-block">
+	<div class="text-center">
+		<img src="img.jpg" class="rounded">
+	</div>
+	<br><br><br>
+
+
+
+	<h3>Picture</h3>
+	<p>If you are using the &lt;picture&gt; element to specify multiple &lt;source&gt; elements for a specific &lt;img&gt;, make sure to add the .img-* classes to the &lt;img&gt; and not to the &lt;picture&gt; tag.</p>
+	​<picture>
+	  <source srcset="img.jpg" type="image/svg+xml">
+	  <img src="..." class="img-fluid img-thumbnail" alt="...">
+	</picture>
+	<br><br><br>
+
+
+
+	<h3>Firgures</h3>
+	<figure class="figure">
+	  <img src="img.jpg" class="figure-img img-fluid rounded" alt="...">
+	  <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+	</figure>
+
+
+	<!-- Import Bootstap JS -->
+	<!-- Place the following <script>s near the end of your pages, right before the closing </body> tag, to enable them -->
+	<!-- Bootstrap requires jQuery, Popper.js, and our own JavaScript plugins. -->
+	<!-- Order: 1. jQuery, 2. Popper.js, 3. Bootstrap -->
+	<!-- Method 1 - From online URL -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<!-- Method 2 - From local path -->
+	<!-- jQuery slim build, which excludes the ajax and effects modules -->
+	<script type="text/javascript" src="jquery/3.5.0/jquery-3.5.0.slim.js"></script>
+	<!-- Download form popper.js website or Maven repository website -->
+	<script type="text/javascript" src="popperjs/1.16.0/popper.min.js"></script>
+	<script type="text/javascript" src="bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

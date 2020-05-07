@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	
+	<title>Bootstrap Alerts</title>
+
+	<!-- Import Boostrap CSS -->
+	<!-- Method 1 - From online URL -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Method 2 - From local path -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+
+	<h1>Bootstrap Alerts</h1>
+	<br>
+
+
+	<h3>Alert Examples</h3>
+	<div class="alert alert-primary" role="alert">
+	  A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+	<div class="alert alert-secondary" role="alert">
+	  A simple secondary alert—check it out!
+	</div>
+	<div class="alert alert-success" role="alert">
+	  A simple success alert—check it out!
+	</div>
+	<div class="alert alert-danger" role="alert">
+	  A simple danger alert—check it out!
+	</div>
+	<div class="alert alert-warning" role="alert">
+	  A simple warning alert—check it out!
+	</div>
+	<div class="alert alert-info" role="alert">
+	  A simple info alert—check it out!
+	</div>
+	<div class="alert alert-light" role="alert">
+	  A simple light alert—check it out!
+	</div>
+	<div class="alert alert-dark" role="alert">
+	  A simple dark alert—check it out!
+	</div>
+	<br><br><br>
+
+
+
+	<h3>Additional content</h3>
+	<div class="alert alert-success" role="alert">
+	  <h4 class="alert-heading">Well done!</h4>
+	  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+	  <hr>
+	  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+	</div>
+	<br><br><br>
+
+
+
+	<h3>Dismissing</h3>
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+	  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+
+
+	<h3>JS Behavior</h3>
+	<div id="myAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+	  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<button id="closeAlert">Click to close alert</button>
+
+
+
+	<!-- Import Bootstap JS -->
+	<!-- Place the following <script>s near the end of your pages, right before the closing </body> tag, to enable them -->
+	<!-- Bootstrap requires jQuery, Popper.js, and our own JavaScript plugins. -->
+	<!-- Order: 1. jQuery, 2. Popper.js, 3. Bootstrap -->
+	<!-- Method 1 - From online URL -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<!-- Method 2 - From local path -->
+	<!-- jQuery slim build, which excludes the ajax and effects modules -->
+	<script type="text/javascript" src="jquery/3.5.0/jquery-3.5.0.slim.js"></script>
+	<!-- Download form popper.js website or Maven repository website -->
+	<script type="text/javascript" src="popperjs/1.16.0/popper.min.js"></script>
+	<script type="text/javascript" src="bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript">
+		$(function() {
+			$('#myAlert').alert(); //not required
+		});
+
+		$('#closeAlert').on('click', function() {
+			console.log("closeAlert button click");
+			$('#myAlert').alert('close');
+		});
+
+		$('#myAlert').on('close.bs.alert', function() {
+			console.log("close.bs.alert");
+			console.log("This event fires immediately when the close instance method is called.");
+		});
+		$('#myAlert').on('closed.bs.alert', function() {
+			console.log("closed.bs.alert");
+			console.log("This event is fired when the alert has been closed (will wait for CSS transitions to complete).");
+		});
+	</script>
+
+</body>
+</html>
