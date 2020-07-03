@@ -1,0 +1,16 @@
+
+.Ball {
+    height: 500px;
+
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes bounce {
+    /* It will move to 100px in 80% of time */
+    80% {
+        transform: translateY(100px);
+    }
+}

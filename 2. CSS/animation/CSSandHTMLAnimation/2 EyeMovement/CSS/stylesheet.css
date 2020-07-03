@@ -1,0 +1,29 @@
+.eyes {
+    height: 500px;
+}
+
+#RightEye {
+    animation-name: shift;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#LeftEye {
+    animation-name: shift;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shift {
+    20% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+}
