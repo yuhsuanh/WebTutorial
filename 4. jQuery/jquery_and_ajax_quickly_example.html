@@ -1,0 +1,108 @@
+<!-- JQuery Tutorial -->
+<html>
+	<head>
+		<title>JQuery and Ajax Quickly Example</title>
+	</head>
+	<body>
+	
+		<!-- html tag -->
+		<div id="div1">
+			<h2>Some Header</h2>
+			<div class="div2">
+				<p>p1</p>
+				<p>p2</p>
+			</div>
+		</div>
+		
+		<script>
+			
+			//===== Select elements =====
+			// select elements which tag name is <div>  ->  (div1 and div2)
+			$("div") 
+			// select the element which id is div1  ->  (div1)
+			$("#div1")
+			// select the all <div> tags and id is div1  ->  (div1)
+			$("div#div1")
+			// select the all <div> tags which <class> is div2  ->  (div2)
+			$("div.div2")
+			// select the all <p> tag(s) which inside all <div> tags which <class> is div2
+			$("div.contents p")
+			// select the <div> tag(s) which inside the another <div> tag
+			$("div > div")
+			// select at least the <div> tag(s) which inside the another <div> tag
+			$("div:has(div)")
+			
+			//===== Event =====
+			// select all element(s) which include target attributw
+			$("a[target]").append(" (Opens in New Window)");
+			// select element which id is div1
+			$("#div1").css({
+			  border: "1px solid green",
+			  height: "40px"
+			});
+			// when form has been submit
+			$("form").submit(function() {
+			  if ($("input#username").val() == "")
+				//TODO
+			});
+			// using getJSON() method to get data which is JSON format, and use callback methdo to process data
+			$.getJSON("test.json", function(data){  
+			  for (var idx in data)  
+					$("#menu").append("<li>" + data[idx] + "</li>");  
+			});
+			//→test.json 的內容
+			//[  
+			//  "Hello world!",   
+			//  "jsGears.com!"  
+			//]
+			//→執行之後的結果：
+			//<ul id="menu">  
+			//  <li>項目1</li>  
+			//  <li>Hello world!</li>  
+			//  <li>jsGears.com!</li>  
+			//</ul>
+			
+			
+
+
+
+
+
+
+
+			//Ajax sent get/post request
+			function testFunc1(){
+				$.ajax({
+					//url
+					url:"https://jsonplaceholder.typicode.com/posts/1",
+					
+					//data
+					data:{
+						"userId":1,
+						"id":1
+					},
+					
+					//type: Http Method(GET,POST,DELETE,PUT)
+					type:"POST",
+					
+					//dataType: Text,xml,json
+					dataType:"json",
+
+					//when success to do...
+					success:function(){
+						//todo
+					},
+					//when failure to do...
+					error:function(){
+						//todo
+					},
+					//after success/failure to do... 
+					complete:function(){
+						//todo
+					}
+					
+				});
+			}
+		</script>
+	</body>
+</html>
