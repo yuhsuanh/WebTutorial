@@ -1,0 +1,94 @@
+body {
+    background-color: #BADA55;
+    color: #fff;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 40px;
+    margin: 32px;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #007e87;
+  color: white;
+  font-size: 60px;
+}
+
+/*Because we are using emojis we will access the font class I made in the p tag
+specifilly so we can keep our emojis large and our font smaller*/
+.font {
+  font-size: 20px;
+}
+
+.container > div {
+    background-color: #333;
+    padding: 16px;
+    padding: 50px;
+    text-align: center;
+}
+
+/*THE BEGINNING OF THE GRID SET UP*/
+
+.container {
+  display: grid;
+  /*grid-template-columns: 1fr 1fr 1fr; */
+  /*grid-template-columns: 2fr 30% 150px; */
+
+  /*rows/columns*/
+  /*grid-template: 1fr 2fr 1fr / 1fr 2fr 1fr;*/
+
+
+  /*3 times 1fr : like a loop*/
+  grid-template-columns: repeat(3, 1fr);
+
+  /*Gap*/
+  /*grid-row-gap: 10px;*/
+  /*grid-column-gap: 10px;*/
+  grid-gap: 20px;
+
+  grid-template-areas: 
+  "elephant elephant elephant"
+  "tiger lion frog"
+  "penguin penguin frog"
+  "owl trex ladybug"
+  "zebra zebra zebra"
+}
+
+#elephant {
+  grid-area: elephant
+}
+
+#tiger {
+  grid-area: tiger
+}
+
+#lion {
+  grid-area: lion
+}
+
+#frog {
+  grid-area: frog
+}
+
+#penguin {
+  grid-area: penguin
+}
+
+#owl {
+  grid-area: owl
+}
+
+#trex {
+  grid-area: trex
+}
+
+#ladybug {
+  grid-area: ladybug
+}
+
+#zebra {
+  grid-area: zebra
+}
+
+
+}
